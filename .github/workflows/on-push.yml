@@ -30,7 +30,8 @@ jobs:
         python -m venv env
         source env/bin/activate
         echo "VIRTUAL ENV:" $VIRTUAL_ENV
-        pip install -r requirements.txt
+        $VIRTUAL_ENV/bin/python -m pip install --upgrade pip
+        $VIRTUAL_ENV/bin/python -m pip install -r requirements.txt
     - name: Run migrations
       run: python manage.py migrate
       working-directory: actiontest
