@@ -34,10 +34,10 @@ jobs:
         $VIRTUAL_ENV/bin/python -m pip install -r requirements.txt
     - name: Run migrations
       run: |
-      source env/bin/activate
-      python manage.py migrate
+        source env/bin/activate
+        python manage.py migrate
       working-directory: actiontest
     - name: Run tests
       run: |
-      source env/bin/activate
-      python actiontest/manage.py test example
+        source env/bin/activate
+        python actiontest/manage.py test example
