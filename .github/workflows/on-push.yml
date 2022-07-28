@@ -35,8 +35,7 @@ jobs:
     - name: Run migrations
       run: |
         source env/bin/activate
-        python manage.py migrate
-      working-directory: actiontest
+        python actiontest/manage.py migrate
     - name: Run tests
       run: |
         source env/bin/activate
